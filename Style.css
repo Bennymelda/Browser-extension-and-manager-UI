@@ -1,0 +1,176 @@
+
+
+body{
+  background-color: black;
+  color: white;
+}
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+.display{
+   display:grid;
+   grid-template-columns:  1fr 1fr 1fr;
+   max-width:1200px;
+   gap:8px;
+   margin-top: 10px;
+   width:100%;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+
+}
+.general{
+  border: 2px solid grey;
+  padding: 15px;
+  border-radius: 10px ;
+  
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: gray;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: white;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+  background: limegreen;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  max-width:1200px;
+  margin-top: 30px;
+
+  
+}
+nav{
+  display: flex;
+  gap:5px;
+  
+}
+a{
+  background-color: white;
+  border: 1px solid grey;
+ /* width:60px;*/
+  border-radius: 30px;
+  padding: 5px;
+  text-align: center;
+  align-items: right;
+  justify-content: center;
+  text-decoration: none;
+  display: flex;
+  color: black;
+}
+a:hover{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+.paste{
+  font-size:25px;
+}
+.lastly{
+  background-color: whitesmoke;
+  color:black;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+ /* width: 720px;*/
+ max-width:1170px;
+ width:100%;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+  
+}
+
+.general-holder{
+  padding: 20px;
+  margin-left: 80px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px){
+.header{  
+  width:60%;
+  
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:10px;
+
+}
+.display{
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr;
+  
+}
+.lastly{
+  width:58%;
+  max-width:730px;
+}
+
+
+nav{
+  display: flex;
+  gap:10px;
+  
+}
+a{
+
+  padding: 10px;
+  
+}
+.paste{
+  font-size:20px;
+}
+.general-holder{
+  padding: 20px;
+  margin-left: 25%;
+}
+}
+
+
+
